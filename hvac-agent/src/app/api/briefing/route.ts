@@ -221,7 +221,13 @@ export async function GET(request: Request) {
       const dollarExposure = Math.abs(p.total_variance as number);
       const forecast = !isCompleted ? forecastMargin(p) : null;
 
-      return { ...p, sector, cohort, status, severity, dollar_exposure: dollarExposure, realized_margin_pct: marginPct, forecast };
+      const projectId = p.project_id as string;
+      const projectName = p.project_name as string;
+      const contractValue = p.contract_value as number;
+      const totalVariance = p.total_variance as number;
+      const avgPctComplete = p.avg_pct_complete as number;
+
+      return { project_id: projectId, project_name: projectName, contract_value: contractValue, total_variance: totalVariance, avg_pct_complete: avgPctComplete, realized_margin_pct: marginPct, sector, cohort, status, severity, dollar_exposure: dollarExposure, forecast };
     });
 
     // ── Step 3: Flag at-risk, sorted by dollar exposure ────────────
