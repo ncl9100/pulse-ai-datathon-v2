@@ -29,25 +29,19 @@ export default function MarginGuardPage() {
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-4xl flex-col items-center justify-center px-6 py-20 text-center">
-        {/* Shield icon */}
+        {/* Main title with shield + gradient */}
         <div
-          className={`mb-8 transition-all duration-700 ease-out ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <Shield className="h-8 w-8 text-muted-foreground/60" strokeWidth={1.5} />
-        </div>
-
-        {/* Main title with gradient */}
-        <h1
-          className={`text-6xl font-extrabold tracking-tight sm:text-7xl md:text-8xl lg:text-9xl transition-all duration-700 ease-out delay-100 ${
+          className={`group flex cursor-default items-center justify-center gap-4 transition-all duration-700 ease-out delay-100 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 bg-clip-text text-transparent">
-            Margin Guard
-          </span>
-        </h1>
+          <Shield className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-muted-foreground/50 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-6deg]" strokeWidth={1.5} />
+          <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl transition-transform duration-300 ease-out group-hover:scale-[1.02]">
+            <span className="bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 bg-clip-text text-transparent">
+              Margin Guard
+            </span>
+          </h1>
+        </div>
 
         {/* Tagline */}
         <p
@@ -90,46 +84,11 @@ export default function MarginGuardPage() {
                 Generating Briefing...
               </span>
             ) : (
-              <span className="flex items-center gap-2">
-                Get Started
-                <span aria-hidden="true">&rarr;</span>
-              </span>
+              "Generate Briefing"
             )}
           </Button>
         </div>
 
-        {/* Decorative waveform at bottom */}
-        <div
-          className={`mt-24 transition-all duration-1000 ease-out delay-500 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <svg
-            width="320"
-            height="60"
-            viewBox="0 0 320 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-muted-foreground/15"
-          >
-            {/* Bar chart waveform pattern */}
-            {Array.from({ length: 40 }).map((_, i) => {
-              const heights = [12, 18, 8, 25, 15, 32, 20, 10, 28, 22, 35, 14, 26, 18, 30, 12, 24, 38, 16, 20, 28, 14, 32, 10, 22, 36, 18, 26, 12, 30, 20, 8, 24, 34, 16, 28, 22, 14, 26, 18];
-              const h = heights[i] || 15;
-              return (
-                <rect
-                  key={i}
-                  x={i * 8}
-                  y={60 - h}
-                  width="4"
-                  height={h}
-                  rx="2"
-                  fill="currentColor"
-                />
-              );
-            })}
-          </svg>
-        </div>
       </div>
     </main>
   );
