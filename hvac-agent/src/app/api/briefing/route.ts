@@ -273,8 +273,28 @@ export async function GET(request: Request) {
       const fieldNotes = (data.field_notes as Array<{ content: string; date: string }>) || [];
       const themes = extractFieldNoteThemes(fieldNotes);
 
+      // Trim data to reduce token count — only send top SOV lines, recent COs, and summary
+      const sovLines = (data.sov_lines as Array<Record<string, unknown>>) || [];
+      const topSovLines = sovLines
+        .sort((a, b) => Math.abs((b.labor_variance as number) || 0) - Math.abs((a.labor_variance as number) || 0))
+        .slice(0, 5)
+        .map((s) => ({ description: s.description, scheduled_value: s.scheduled_value, estimated_labor: s.estimated_labor_cost, actual_labor: s.actual_labor_cost, estimated_material: s.estimated_material_cost, actual_material: s.actual_material_cost, labor_variance: s.labor_variance, material_variance: s.material_variance }));
+
+      const changeOrders = (data.change_orders as Array<Record<string, unknown>>) || [];
+      const topCOs = changeOrders.slice(0, 5).map((co) => ({ co_number: co.co_number, reason: co.reason_category, amount: co.amount, status: co.status }));
+
+      const pendingCOs = (data.pending_cos as Array<Record<string, unknown>>) || [];
+      const topPending = pendingCOs.slice(0, 3).map((co) => ({ co_number: co.co_number, amount: co.amount, status: co.status }));
+
+      const billingGaps = (data.billing_gaps as Array<Record<string, unknown>>) || [];
+      const topGaps = billingGaps.slice(0, 3);
+
       const dataPackage = JSON.stringify({
-        ...data,
+        health: data.health,
+        top_sov_lines_by_variance: topSovLines,
+        top_change_orders: topCOs,
+        pending_change_orders: topPending,
+        billing_gaps: topGaps,
         sector: project.sector,
         status: project.status,
         dollar_exposure: project.dollar_exposure,
