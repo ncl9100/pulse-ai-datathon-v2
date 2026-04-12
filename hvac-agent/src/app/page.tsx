@@ -45,7 +45,7 @@ export default function MarginGuardPage() {
 
         {/* Tagline */}
         <p
-          className={`mt-6 text-2xl font-medium tracking-tight text-foreground/80 sm:text-3xl md:text-4xl transition-all duration-700 ease-out delay-200 ${
+          className={`mt-6 font-[family-name:var(--font-playfair)] text-2xl font-medium tracking-tight text-foreground/80 sm:text-3xl md:text-4xl transition-all duration-700 ease-out delay-200 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
