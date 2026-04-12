@@ -38,7 +38,7 @@ export default function MarginGuardPage() {
           <Shield className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-muted-foreground/50 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-6deg]" strokeWidth={1.5} />
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl transition-transform duration-300 ease-out group-hover:scale-[1.02]">
             <span className="bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 bg-clip-text text-transparent">
-              Margin Guard
+              MarginGuard
             </span>
           </h1>
         </div>
