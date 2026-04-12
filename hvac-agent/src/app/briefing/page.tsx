@@ -177,7 +177,7 @@ export default function BriefingPage() {
           setLoadingMessage(messages[msgIndex]);
         }, 4000);
 
-        const response = await fetch("/api/briefing?limit=5");
+        const response = await fetch("/api/briefing?limit=3");
         clearInterval(msgInterval);
 
         if (!response.ok) {

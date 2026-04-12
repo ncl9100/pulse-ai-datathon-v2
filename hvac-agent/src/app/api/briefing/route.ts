@@ -195,7 +195,7 @@ Format as JSON:
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const limit = parseInt(searchParams.get("limit") || "5", 10);
+  const limit = parseInt(searchParams.get("limit") || "3", 10);
 
   try {
     // ── Step 1: Load all projects with sector classification ────────
@@ -260,15 +260,14 @@ export async function GET(request: Request) {
     }
 
     const client = new Anthropic({ apiKey });
-    const analyses = [];
 
-    for (const project of flagged) {
+    // ── Step 4: Analyze each flagged project with Claude (PARALLEL) ──
+    const analysisPromises = flagged.map(async (project) => {
       const projectId = project.project_id as string;
       const data = loadProjectData(projectId);
 
       if (!data) {
-        analyses.push({ raw_response: `No pre-computed data for ${projectId}` });
-        continue;
+        return { raw_response: `No pre-computed data for ${projectId}` };
       }
 
       const fieldNotes = (data.field_notes as Array<{ content: string; date: string }>) || [];
@@ -285,7 +284,7 @@ export async function GET(request: Request) {
 
       const message = await client.messages.create({
         model: "claude-sonnet-4-20250514",
-        max_tokens: 4096,
+        max_tokens: 2048,
         system: PROJECT_ANALYSIS_PROMPT,
         messages: [{
           role: "user",
@@ -304,15 +303,15 @@ export async function GET(request: Request) {
         analysis = { raw_response: responseText };
       }
 
-      analyses.push({
+      return {
         ...analysis,
         field_note_themes: themes,
         forecast: project.forecast,
         tokens_used: { input: message.usage.input_tokens, output: message.usage.output_tokens },
-      });
-    }
+      };
+    });
 
-    // ── Step 5: Portfolio-level pattern analysis ────────────────────
+    // ── Step 5: Portfolio-level pattern analysis (runs in PARALLEL with project analyses) ──
     const sectorMap: Record<string, { count: number; margins: number[]; exposure: number }> = {};
     for (const p of classified) {
       if (!sectorMap[p.sector]) sectorMap[p.sector] = { count: 0, margins: [], exposure: 0 };
@@ -341,15 +340,21 @@ export async function GET(request: Request) {
       overall_avg_margin: Math.round(avgMargin * 100) / 100,
     }, null, 2);
 
-    const portfolioMessage = await client.messages.create({
+    const portfolioPromise = client.messages.create({
       model: "claude-sonnet-4-20250514",
-      max_tokens: 4096,
+      max_tokens: 2048,
       system: PORTFOLIO_PATTERNS_PROMPT,
       messages: [{
         role: "user",
         content: `Analyze these portfolio-wide statistics and identify systemic patterns the CFO needs to know about.\n\n${portfolioData}`,
       }],
     });
+
+    // ── Await ALL Claude calls in parallel ─────────────────────────
+    const [analyses, portfolioMessage] = await Promise.all([
+      Promise.all(analysisPromises),
+      portfolioPromise,
+    ]);
 
     const portfolioText = portfolioMessage.content.find((b) => b.type === "text");
     const portfolioResponseText = portfolioText ? portfolioText.text : "";
