@@ -3,7 +3,7 @@
 An autonomous AI agent that analyzes a $6.4B portfolio of 405 HVAC projects, detects margin erosion, explains root causes in plain English, and delivers dollar-quantified recovery actions a CFO can act on immediately.
 
 **Live**: https://pulse-ai-datathon-v2-o7s9.vercel.app
-**Submission**: NYU DSC Datathon — The HVAC Margin Rescue Challenge
+**Submission**: NYU DSC Datathon — PulseAI Foundry x Vercel
 
 ---
 
