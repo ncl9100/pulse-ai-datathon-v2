@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "src/app/api/briefing/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/analyze/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}
