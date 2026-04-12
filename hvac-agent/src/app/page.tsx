@@ -40,9 +40,8 @@ export default function MarginGuardPage() {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-4xl flex-col items-center justify-center px-6 py-20 text-center">
         {/* Main title with shield + gradient */}
         <div
-          className={`group flex cursor-default items-center justify-center gap-4 transition-all duration-700 ease-out delay-100 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`group flex cursor-default items-center justify-center gap-4 transition-all duration-700 ease-out delay-100 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <Shield className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-muted-foreground/50 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-6deg]" strokeWidth={1.5} />
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl transition-transform duration-300 ease-out group-hover:scale-[1.02]">
@@ -54,18 +53,16 @@ export default function MarginGuardPage() {
 
         {/* Tagline */}
         <p
-          className={`mt-6 font-[family-name:var(--font-playfair)] text-2xl font-medium tracking-tight text-foreground/80 sm:text-3xl md:text-4xl transition-all duration-700 ease-out delay-200 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-6 font-[family-name:var(--font-playfair)] text-2xl font-medium tracking-tight text-foreground/80 sm:text-3xl md:text-4xl transition-all duration-700 ease-out delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           A Tool, A Partner, A Future
         </p>
 
         {/* Description */}
         <p
-          className={`mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg transition-all duration-700 ease-out delay-300 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg transition-all duration-700 ease-out delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           Transform your HVAC project data into actionable margin insights.
           <br />
@@ -74,9 +71,8 @@ export default function MarginGuardPage() {
 
         {/* Upload Button */}
         <div
-          className={`mt-10 mb-4 transition-all duration-700 ease-out delay-[350ms] ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-10 mb-4 transition-all duration-700 ease-out delay-[350ms] ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <Button
             variant="outline"
@@ -91,9 +87,8 @@ export default function MarginGuardPage() {
 
         {/* Generate Briefing Button */}
         <div
-          className={`mt-4 transition-all duration-700 ease-out delay-[400ms] ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-4 transition-all duration-700 ease-out delay-[400ms] ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <Button
             size="lg"
@@ -129,7 +124,7 @@ export default function MarginGuardPage() {
                 </div>
                 <h2 className="text-xl font-semibold tracking-tight text-foreground">Upload Raw Data</h2>
               </div>
-              <button 
+              <button
                 onClick={() => setIsUploadOpen(false)}
                 className="text-muted-foreground hover:text-foreground transition-all p-2 rounded-full hover:bg-muted"
                 aria-label="Close modal"
@@ -137,10 +132,10 @@ export default function MarginGuardPage() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            
+
             {/* Modal Content */}
             <div className="flex-1 p-8 flex flex-col items-center justify-start bg-muted/10 overflow-y-auto">
-              <label 
+              <label
                 htmlFor="file-upload"
                 className="w-full border-[1.5px] border-dashed border-border/80 rounded-xl flex flex-col items-center justify-center p-8 transition-all hover:border-primary/50 hover:bg-primary/5 group cursor-pointer focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 shrink-0"
               >
@@ -148,7 +143,7 @@ export default function MarginGuardPage() {
                   <Upload className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
                 <h3 className="text-2xl font-medium tracking-tight mb-2 text-foreground/90">
-                  Select predefined parquet files to upload
+                  Select parquet files to upload
                 </h3>
                 <p className="text-base text-muted-foreground text-center max-w-md mb-8">
                   Drag and drop your files here, or click to browse. Only <span className="font-semibold text-foreground/80">.parquet</span> format is supported.
