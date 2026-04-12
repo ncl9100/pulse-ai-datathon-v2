@@ -220,12 +220,24 @@ export async function GET(request: Request) {
 
       const dollarExposure = Math.abs(p.total_variance as number);
       const forecast = !isCompleted ? forecastMargin(p) : null;
-      const projectName = p.project_name as string;
-      const contractValue = p.contract_value as number;
-      const totalVariance = p.total_variance as number;
-      const avgPctComplete = p.avg_pct_complete as number;
 
-      return { project_id: projectId, project_name: projectName, contract_value: contractValue, total_variance: totalVariance, avg_pct_complete: avgPctComplete, realized_margin_pct: marginPct, sector, cohort, status, severity, dollar_exposure: dollarExposure, forecast };
+      return {
+        project_id: projectId,
+        project_name: p.project_name as string,
+        gc_name: p.gc_name as string,
+        original_contract_value: p.original_contract_value as number,
+        actual_total_cost: p.actual_total_cost as number,
+        contract_value: p.adjusted_contract_value as number,
+        total_variance: p.total_variance as number,
+        avg_pct_complete: p.avg_pct_complete as number,
+        realized_margin_pct: marginPct,
+        sector,
+        cohort,
+        status,
+        severity,
+        dollar_exposure: dollarExposure,
+        forecast,
+      };
     });
 
     // ── Step 3: Flag at-risk, sorted by dollar exposure ────────────
@@ -305,7 +317,7 @@ export async function GET(request: Request) {
     for (const p of classified) {
       if (!sectorMap[p.sector]) sectorMap[p.sector] = { count: 0, margins: [], exposure: 0 };
       sectorMap[p.sector].count++;
-      sectorMap[p.sector].margins.push(p.realized_margin_pct as number);
+      sectorMap[p.sector].margins.push(p.realized_margin_pct);
       if (p.severity === "CRITICAL" || p.severity === "WARNING") {
         sectorMap[p.sector].exposure += p.dollar_exposure;
       }
