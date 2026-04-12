@@ -188,8 +188,7 @@ Vercel project settings:
 
 ## Team
 
-Built for the NYU DSC Datathon by Nathan (ncl9100@nyu.edu).
+Built for the NYU DSC Datathon by Nathan (ncl9100@nyu.edu), Thomas Yanle Li (yl12316@nyu.edu), Benjamin Zhou, and Kai Lee.
 
 ---
 
-*Last Updated: April 12, 2026*
