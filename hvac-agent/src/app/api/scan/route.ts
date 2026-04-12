@@ -2,46 +2,17 @@
  * GET /api/scan
  *
  * Portfolio scan — returns all 405 projects ranked by margin health.
- * This is the "autonomous portfolio scan" the agent runs first.
- * Returns project_health data sorted by realized margin (worst first).
+ * Uses pre-computed data from DuckDB (exported as JSON).
  */
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import scanData from "@/data/scan.json";
 
 export async function GET() {
   try {
-    const projects = await query(`
-      SELECT
-        project_id,
-        project_name,
-        original_contract_value,
-        adjusted_contract_value,
-        actual_total_cost,
-        actual_labor_cost,
-        actual_material_cost,
-        budgeted_labor_cost,
-        budgeted_material_cost,
-        total_estimated_budget,
-        labor_variance,
-        material_variance,
-        total_variance,
-        budget_coverage_pct,
-        billing_gap_pct,
-        realized_margin_pct,
-        approved_co_value,
-        pending_co_value,
-        cumulative_billed,
-        retention_held,
-        avg_pct_complete,
-        gc_name,
-        contract_date,
-        substantial_completion_date
-      FROM project_health
-      ORDER BY realized_margin_pct ASC
-    `);
+    const projects = scanData as Record<string, unknown>[];
 
     // Classify each project by severity
-    const classified = projects.map((p: Record<string, unknown>) => {
+    const classified = projects.map((p) => {
       const margin = p.realized_margin_pct as number;
       let severity: string;
       if (margin < 0) severity = "CRITICAL";
@@ -55,7 +26,6 @@ export async function GET() {
     // Portfolio-level stats
     const critical = classified.filter((p) => p.severity === "CRITICAL").length;
     const warning = classified.filter((p) => p.severity === "WARNING").length;
-    const totalAtRisk = critical + warning;
     const totalVariance = classified.reduce(
       (sum, p) => sum + (p.total_variance as number),
       0
@@ -71,7 +41,7 @@ export async function GET() {
         total_projects: classified.length,
         critical_count: critical,
         warning_count: warning,
-        total_at_risk: totalAtRisk,
+        total_at_risk: critical + warning,
         total_portfolio_variance: Math.round(totalVariance),
         average_realized_margin_pct: Math.round(avgMargin * 100) / 100,
       },
