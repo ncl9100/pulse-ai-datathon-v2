@@ -167,7 +167,7 @@ python3 build_duckdb.py
 
 ---
 
-## Deployment
+## Deployment 
 
 The app auto-deploys to Vercel on push to `main`:
 
