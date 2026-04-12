@@ -1,0 +1,762 @@
+{
+  "health": {
+    "project_id": "PRJ-2020-184",
+    "project_name": "San Antonio Cloud Campus Phase 1 - Cooling",
+    "original_contract_value": 5820000,
+    "contract_date": "2020-01-26T00:00:00",
+    "substantial_completion_date": "2022-04-30T00:00:00",
+    "gc_name": "Skanska USA",
+    "adjusted_contract_value": 6778500.0,
+    "actual_labor_cost": 3956378.55,
+    "actual_material_cost": 2542634.77,
+    "actual_total_cost": 6499013.32,
+    "budgeted_labor_cost": 2753400.0,
+    "budgeted_material_cost": 1141300.0,
+    "total_estimated_budget": 5539500.0,
+    "budgeted_labor_hours": 46338.0,
+    "actual_hours_st": 43398.0,
+    "actual_hours_ot": 2530.0,
+    "approved_co_value": 958500.0,
+    "pending_co_value": 0.0,
+    "cumulative_billed": 5786200,
+    "retention_held": 578620.0,
+    "avg_pct_complete": 98.91,
+    "labor_variance": 1202978.5499999998,
+    "material_variance": 1401334.77,
+    "total_variance": 959513.3200000003,
+    "budget_coverage_pct": 95.18,
+    "billing_gap_pct": 13.55,
+    "realized_margin_pct": 4.12
+  },
+  "sov_lines": [
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-01",
+      "description": "General Conditions & Project Management",
+      "scheduled_value": 339200,
+      "estimated_labor_cost": 209400,
+      "estimated_material_cost": 136800,
+      "estimated_labor_hours": 3524,
+      "actual_labor_cost": 724428.4,
+      "actual_hours": 8462.0,
+      "actual_material_cost": 0.0,
+      "labor_variance": 515028.4,
+      "material_variance": -136800.0
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-09",
+      "description": "Equipment - Terminal Units (VAV/FCU)",
+      "scheduled_value": 471100,
+      "estimated_labor_cost": 78600,
+      "estimated_material_cost": 0,
+      "estimated_labor_hours": 1324,
+      "actual_labor_cost": 383608.52,
+      "actual_hours": 4430.0,
+      "actual_material_cost": 391889.46,
+      "labor_variance": 305008.52,
+      "material_variance": 391889.46
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-02",
+      "description": "Submittals & Engineering",
+      "scheduled_value": 149900,
+      "estimated_labor_cost": 80900,
+      "estimated_material_cost": 47500,
+      "estimated_labor_hours": 1362,
+      "actual_labor_cost": 245589.92,
+      "actual_hours": 2818.0,
+      "actual_material_cost": 0.0,
+      "labor_variance": 164689.92,
+      "material_variance": -47500.0
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-11",
+      "description": "Controls - Programming & Commissioning",
+      "scheduled_value": 223600,
+      "estimated_labor_cost": 139400,
+      "estimated_material_cost": 88400,
+      "estimated_labor_hours": 2347,
+      "actual_labor_cost": 272243.43,
+      "actual_hours": 3162.0,
+      "actual_material_cost": 96685.67,
+      "labor_variance": 132843.43,
+      "material_variance": 8285.669999999998
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-07",
+      "description": "Equipment - RTUs/AHUs",
+      "scheduled_value": 723100,
+      "estimated_labor_cost": 100400,
+      "estimated_material_cost": 0,
+      "estimated_labor_hours": 1690,
+      "actual_labor_cost": 202166.69,
+      "actual_hours": 2360.0,
+      "actual_material_cost": 537812.97,
+      "labor_variance": 101766.69,
+      "material_variance": 537812.97
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-08",
+      "description": "Equipment - Chillers/Boilers",
+      "scheduled_value": 628900,
+      "estimated_labor_cost": 125600,
+      "estimated_material_cost": 0,
+      "estimated_labor_hours": 2114,
+      "actual_labor_cost": 196211.78,
+      "actual_hours": 2308.0,
+      "actual_material_cost": 534353.77,
+      "labor_variance": 70611.78,
+      "material_variance": 534353.77
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-05",
+      "description": "Piping - Hydronic Systems",
+      "scheduled_value": 603000,
+      "estimated_labor_cost": 338600,
+      "estimated_material_cost": 223400,
+      "estimated_labor_hours": 5698,
+      "actual_labor_cost": 383706.82,
+      "actual_hours": 4376.0,
+      "actual_material_cost": 244373.28,
+      "labor_variance": 45106.82000000001,
+      "material_variance": 20973.28
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-12",
+      "description": "Insulation",
+      "scheduled_value": 273200,
+      "estimated_labor_cost": 179300,
+      "estimated_material_cost": 0,
+      "estimated_labor_hours": 3018,
+      "actual_labor_cost": 202959.99,
+      "actual_hours": 2348.0,
+      "actual_material_cost": 108442.79,
+      "labor_variance": 23659.98999999999,
+      "material_variance": 108442.79
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-06",
+      "description": "Piping - Refrigerant",
+      "scheduled_value": 306700,
+      "estimated_labor_cost": 191800,
+      "estimated_material_cost": 103800,
+      "estimated_labor_hours": 3227,
+      "actual_labor_cost": 202848.26,
+      "actual_hours": 2378.0,
+      "actual_material_cost": 113570.4,
+      "labor_variance": 11048.26000000001,
+      "material_variance": 9770.399999999994
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-15",
+      "description": "Closeout Documentation & Training",
+      "scheduled_value": 97500,
+      "estimated_labor_cost": 50800,
+      "estimated_material_cost": 25200,
+      "estimated_labor_hours": 855,
+      "actual_labor_cost": 54590.66,
+      "actual_hours": 628.0,
+      "actual_material_cost": 0.0,
+      "labor_variance": 3790.6600000000035,
+      "material_variance": -25200.0
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-14",
+      "description": "Startup & Commissioning Support",
+      "scheduled_value": 124200,
+      "estimated_labor_cost": 81900,
+      "estimated_material_cost": 45000,
+      "estimated_labor_hours": 1378,
+      "actual_labor_cost": 67090.13,
+      "actual_hours": 750.0,
+      "actual_material_cost": 0.0,
+      "labor_variance": -14809.869999999995,
+      "material_variance": -45000.0
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-03",
+      "description": "Ductwork - Fabrication",
+      "scheduled_value": 575900,
+      "estimated_labor_cost": 377500,
+      "estimated_material_cost": 132200,
+      "estimated_labor_hours": 6352,
+      "actual_labor_cost": 357158.86,
+      "actual_hours": 4202.0,
+      "actual_material_cost": 144662.31,
+      "labor_variance": -20341.140000000014,
+      "material_variance": 12462.309999999998
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-13",
+      "description": "Testing, Adjusting & Balancing (TAB)",
+      "scheduled_value": 145500,
+      "estimated_labor_cost": 80000,
+      "estimated_material_cost": 0,
+      "estimated_labor_hours": 1347,
+      "actual_labor_cost": 59037.56,
+      "actual_hours": 686.0,
+      "actual_material_cost": 0.0,
+      "labor_variance": -20962.440000000002,
+      "material_variance": 0.0
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-10",
+      "description": "Controls - DDC/BAS Installation",
+      "scheduled_value": 458000,
+      "estimated_labor_cost": 246400,
+      "estimated_material_cost": 165900,
+      "estimated_labor_hours": 4147,
+      "actual_labor_cost": 209860.48,
+      "actual_hours": 2486.0,
+      "actual_material_cost": 181442.24,
+      "labor_variance": -36539.51999999999,
+      "material_variance": 15542.23999999999
+    },
+    {
+      "sov_line_id": "PRJ-2020-184-SOV-04",
+      "description": "Ductwork - Installation",
+      "scheduled_value": 700200,
+      "estimated_labor_cost": 472800,
+      "estimated_material_cost": 173100,
+      "estimated_labor_hours": 7955,
+      "actual_labor_cost": 394877.05,
+      "actual_hours": 4534.0,
+      "actual_material_cost": 189401.88,
+      "labor_variance": -77922.95000000001,
+      "material_variance": 16301.880000000005
+    }
+  ],
+  "change_orders": [
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-008",
+      "date_submitted": "2022-01-30T00:00:00",
+      "reason_category": "Scope Gap",
+      "description": "Work not clearly defined in bid documents",
+      "amount": 232400,
+      "status": "Approved",
+      "related_rfi": "RFI-020",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-05', 'PRJ-2020-184-SOV-04']",
+      "labor_hours_impact": 190,
+      "schedule_impact_days": 0,
+      "submitted_by": "K. Thompson",
+      "approved_by": "Project Manager"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-010",
+      "date_submitted": "2021-10-10T00:00:00",
+      "reason_category": "Coordination",
+      "description": "Rerouting required due to electrical conflict",
+      "amount": 129700,
+      "status": "Approved",
+      "related_rfi": null,
+      "affected_sov_lines": "['PRJ-2020-184-SOV-05', 'PRJ-2020-184-SOV-06', 'PRJ-2020-184-SOV-02']",
+      "labor_hours_impact": 121,
+      "schedule_impact_days": 0,
+      "submitted_by": "K. Thompson",
+      "approved_by": "Owner Rep"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-004",
+      "date_submitted": "2020-07-12T00:00:00",
+      "reason_category": "Code Compliance",
+      "description": "Inspector required fire dampers",
+      "amount": 120800,
+      "status": "Approved",
+      "related_rfi": null,
+      "affected_sov_lines": "['PRJ-2020-184-SOV-10', 'PRJ-2020-184-SOV-12', 'PRJ-2020-184-SOV-07']",
+      "labor_hours_impact": 106,
+      "schedule_impact_days": 14,
+      "submitted_by": "R. Williams",
+      "approved_by": "Project Manager"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-002",
+      "date_submitted": "2021-02-25T00:00:00",
+      "reason_category": "Design Error",
+      "description": "Drawings showed incorrect equipment clearance - field correction required",
+      "amount": 106200,
+      "status": "Approved",
+      "related_rfi": "RFI-015",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-02', 'PRJ-2020-184-SOV-08', 'PRJ-2020-184-SOV-03']",
+      "labor_hours_impact": 86,
+      "schedule_impact_days": 14,
+      "submitted_by": "R. Williams",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-001",
+      "date_submitted": "2022-02-13T00:00:00",
+      "reason_category": "Unforeseen Condition",
+      "description": "Discovered existing ductwork not shown on documents",
+      "amount": 99500,
+      "status": "Rejected",
+      "related_rfi": "RFI-016",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-03', 'PRJ-2020-184-SOV-08']",
+      "labor_hours_impact": 60,
+      "schedule_impact_days": 0,
+      "submitted_by": "K. Thompson",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-007",
+      "date_submitted": "2021-09-12T00:00:00",
+      "reason_category": "Unforeseen Condition",
+      "description": "Discovered existing ductwork not shown on documents",
+      "amount": 94500,
+      "status": "Approved",
+      "related_rfi": "RFI-023",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-07', 'PRJ-2020-184-SOV-09']",
+      "labor_hours_impact": 21,
+      "schedule_impact_days": 2,
+      "submitted_by": "K. Thompson",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-011",
+      "date_submitted": "2020-05-23T00:00:00",
+      "reason_category": "Owner Request",
+      "description": "Added controls points per owner directive",
+      "amount": 85100,
+      "status": "Approved",
+      "related_rfi": "RFI-028",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-07', 'PRJ-2020-184-SOV-11', 'PRJ-2020-184-SOV-10']",
+      "labor_hours_impact": 144,
+      "schedule_impact_days": 0,
+      "submitted_by": "J. Martinez",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-009",
+      "date_submitted": "2021-06-25T00:00:00",
+      "reason_category": "Design Error",
+      "description": "Drawings showed incorrect duct size - field correction required",
+      "amount": 77600,
+      "status": "Approved",
+      "related_rfi": "RFI-014",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-14', 'PRJ-2020-184-SOV-05', 'PRJ-2020-184-SOV-10']",
+      "labor_hours_impact": 92,
+      "schedule_impact_days": 5,
+      "submitted_by": "R. Williams",
+      "approved_by": "Project Manager"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-003",
+      "date_submitted": "2020-10-10T00:00:00",
+      "reason_category": "Unforeseen Condition",
+      "description": "Discovered structural conflict not shown on documents",
+      "amount": 48200,
+      "status": "Approved",
+      "related_rfi": "RFI-027",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-12', 'PRJ-2020-184-SOV-10', 'PRJ-2020-184-SOV-02']",
+      "labor_hours_impact": 18,
+      "schedule_impact_days": 0,
+      "submitted_by": "K. Thompson",
+      "approved_by": "Owner Rep"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-013",
+      "date_submitted": "2021-10-25T00:00:00",
+      "reason_category": "Acceleration",
+      "description": "Premium time to maintain schedule",
+      "amount": 46900,
+      "status": "Approved",
+      "related_rfi": "RFI-017",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-14', 'PRJ-2020-184-SOV-13', 'PRJ-2020-184-SOV-03']",
+      "labor_hours_impact": 87,
+      "schedule_impact_days": 0,
+      "submitted_by": "R. Williams",
+      "approved_by": "Project Manager"
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-006",
+      "date_submitted": "2021-07-10T00:00:00",
+      "reason_category": "Unforeseen Condition",
+      "description": "Discovered asbestos insulation not shown on documents",
+      "amount": 25200,
+      "status": "Approved",
+      "related_rfi": "RFI-002",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-14', 'PRJ-2020-184-SOV-07']",
+      "labor_hours_impact": 183,
+      "schedule_impact_days": 14,
+      "submitted_by": "J. Martinez",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-012",
+      "date_submitted": "2020-08-29T00:00:00",
+      "reason_category": "Coordination",
+      "description": "Rerouting required due to plumbing conflict",
+      "amount": 25100,
+      "status": "Approved",
+      "related_rfi": "RFI-002",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-03']",
+      "labor_hours_impact": 58,
+      "schedule_impact_days": 0,
+      "submitted_by": "J. Martinez",
+      "approved_by": null
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "co_number": "CO-005",
+      "date_submitted": "2020-06-22T00:00:00",
+      "reason_category": "Value Engineering",
+      "description": "Substitution approved: Carrier RTU to steel piping",
+      "amount": -33200,
+      "status": "Approved",
+      "related_rfi": "RFI-004",
+      "affected_sov_lines": "['PRJ-2020-184-SOV-02', 'PRJ-2020-184-SOV-14']",
+      "labor_hours_impact": -74,
+      "schedule_impact_days": 0,
+      "submitted_by": "K. Thompson",
+      "approved_by": "Owner Rep"
+    }
+  ],
+  "billing": [
+    {
+      "project_id": "PRJ-2020-184",
+      "application_number": 27,
+      "period_end": "2022-04-10T00:00:00",
+      "period_total": 33800,
+      "cumulative_billed": 5786200,
+      "retention_held": 578620.0,
+      "net_payment_due": 5207580.0,
+      "status": "Pending",
+      "payment_date": "2022-05-11T00:00:00",
+      "line_item_count": 13
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "application_number": 23,
+      "period_end": "2021-12-11T00:00:00",
+      "period_total": 220900,
+      "cumulative_billed": 5752400,
+      "retention_held": 575240.0,
+      "net_payment_due": 5177160.0,
+      "status": "Pending",
+      "payment_date": "2022-01-17T00:00:00",
+      "line_item_count": 13
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "application_number": 22,
+      "period_end": "2021-11-11T00:00:00",
+      "period_total": 210000,
+      "cumulative_billed": 5531500,
+      "retention_held": 553150.0,
+      "net_payment_due": 4978350.0,
+      "status": "Approved",
+      "payment_date": "2021-12-11T00:00:00",
+      "line_item_count": 13
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "application_number": 21,
+      "period_end": "2021-10-12T00:00:00",
+      "period_total": 218800,
+      "cumulative_billed": 5321500,
+      "retention_held": 532150.0,
+      "net_payment_due": 4789350.0,
+      "status": "Pending",
+      "payment_date": "2021-11-18T00:00:00",
+      "line_item_count": 13
+    },
+    {
+      "project_id": "PRJ-2020-184",
+      "application_number": 20,
+      "period_end": "2021-09-12T00:00:00",
+      "period_total": 215800,
+      "cumulative_billed": 5102700,
+      "retention_held": 510270.0,
+      "net_payment_due": 4592430.0,
+      "status": "Paid",
+      "payment_date": "2021-10-16T00:00:00",
+      "line_item_count": 13
+    }
+  ],
+  "pending_cos": [],
+  "billing_gaps": [
+    {
+      "description": "General Conditions & Project Management",
+      "scheduled_value": 339200,
+      "billed": 5786200,
+      "gap": -5447000
+    },
+    {
+      "description": "Submittals & Engineering",
+      "scheduled_value": 149900,
+      "billed": 5786200,
+      "gap": -5636300
+    },
+    {
+      "description": "Ductwork - Fabrication",
+      "scheduled_value": 575900,
+      "billed": 5786200,
+      "gap": -5210300
+    },
+    {
+      "description": "Ductwork - Installation",
+      "scheduled_value": 700200,
+      "billed": 5786200,
+      "gap": -5086000
+    },
+    {
+      "description": "Piping - Hydronic Systems",
+      "scheduled_value": 603000,
+      "billed": 5786200,
+      "gap": -5183200
+    },
+    {
+      "description": "Piping - Refrigerant",
+      "scheduled_value": 306700,
+      "billed": 5786200,
+      "gap": -5479500
+    },
+    {
+      "description": "Equipment - RTUs/AHUs",
+      "scheduled_value": 723100,
+      "billed": 5786200,
+      "gap": -5063100
+    },
+    {
+      "description": "Equipment - Chillers/Boilers",
+      "scheduled_value": 628900,
+      "billed": 5786200,
+      "gap": -5157300
+    },
+    {
+      "description": "Equipment - Terminal Units (VAV/FCU)",
+      "scheduled_value": 471100,
+      "billed": 5786200,
+      "gap": -5315100
+    },
+    {
+      "description": "Controls - DDC/BAS Installation",
+      "scheduled_value": 458000,
+      "billed": 5786200,
+      "gap": -5328200
+    },
+    {
+      "description": "Controls - Programming & Commissioning",
+      "scheduled_value": 223600,
+      "billed": 5786200,
+      "gap": -5562600
+    },
+    {
+      "description": "Insulation",
+      "scheduled_value": 273200,
+      "billed": 5786200,
+      "gap": -5513000
+    },
+    {
+      "description": "Testing, Adjusting & Balancing (TAB)",
+      "scheduled_value": 145500,
+      "billed": 5786200,
+      "gap": -5640700
+    },
+    {
+      "description": "Startup & Commissioning Support",
+      "scheduled_value": 124200,
+      "billed": 5786200,
+      "gap": -5662000
+    },
+    {
+      "description": "Closeout Documentation & Training",
+      "scheduled_value": 97500,
+      "billed": 5786200,
+      "gap": -5688700
+    }
+  ],
+  "field_notes": [
+    {
+      "date": "9/22/21",
+      "author": "K. Thompson",
+      "note_type": "Daily Report",
+      "content": "Crew arrived 0700. Weather: Partly cloudy, 65\u00b0F. 6 workers on site. Focus today: piping rough-in mechanical room. Coordination issues with electrical - resolved on site."
+    },
+    {
+      "date": "8/5/20",
+      "author": "K. Thompson",
+      "note_type": "Coordination Note",
+      "content": "TAB contractor on site - balancing AHU-1 supply. Initial readings: static pressure high. Adjustments: sheave change AHU."
+    },
+    {
+      "date": "8/28/20",
+      "author": "R. Williams",
+      "note_type": "Issue Log",
+      "content": "Design discrepancy encountered: sprinkler head conflicts with diffuser at B-7. Resolution: Awaiting engineer response. Impact: cost impact TBD."
+    },
+    {
+      "date": "8/25/20",
+      "author": "R. Williams",
+      "note_type": "Inspection Note",
+      "content": "Equipment startup for AHU-2. Successful - all parameters normal. Punch list items: 3 minor items."
+    },
+    {
+      "date": "8/10/21",
+      "author": "K. Thompson",
+      "note_type": "Issue Log",
+      "content": "Installed 31 diffusers on floor 2. Rework required grid C-4. Inspections needed: pressure test Monday."
+    },
+    {
+      "date": "7/17/20",
+      "author": "J. Martinez",
+      "note_type": "Daily Report",
+      "content": "Equipment startup for AHU-2. Delayed - controls not ready. Punch list items: 3 minor items."
+    },
+    {
+      "date": "7/16/21",
+      "author": "K. Thompson",
+      "note_type": "Safety Log",
+      "content": "Received delivery of sheet metal - 81 units. Matched PO. Staged at loading dock."
+    },
+    {
+      "date": "7/15/20",
+      "author": "R. Williams",
+      "note_type": "Inspection Note",
+      "content": "Coordination conflict encountered: sprinkler head conflicts with diffuser at B-7. Resolution: Resolved on site with GC. Impact: schedule neutral."
+    },
+    {
+      "date": "6/17/20",
+      "author": "K. Thompson",
+      "note_type": "Issue Log",
+      "content": "Design discrepancy encountered: field conditions don't match drawings. Resolution: Workaround implemented. Impact: schedule neutral."
+    },
+    {
+      "date": "5/10/21",
+      "author": "R. Williams",
+      "note_type": "Safety Log",
+      "content": "Working in basement - 47% complete this zone. Remaining: controls terminations."
+    },
+    {
+      "date": "4/7/21",
+      "author": "K. Thompson",
+      "note_type": "Issue Log",
+      "content": "Installed 78 diffusers on floor 2. Rework required grid C-4. Inspections needed: pressure test Monday."
+    },
+    {
+      "date": "4/7/20",
+      "author": "K. Thompson",
+      "note_type": "Daily Report",
+      "content": "Met with plumbing foreman re: coordination. Agreed on sequence for ceiling close-in. Action items: FP to adjust sprinkler head locations"
+    },
+    {
+      "date": "4/27/20",
+      "author": "K. Thompson",
+      "note_type": "Safety Log",
+      "content": "TAB contractor on site - balancing AHU-1 supply. Initial readings: static pressure high. Adjustments: none required."
+    },
+    {
+      "date": "4/26/21",
+      "author": "R. Williams",
+      "note_type": "Coordination Note",
+      "content": "GC weekly meeting - discussed change orders, RFI backlog, coordination. Schedule status: on track. RFIs pending: 13."
+    },
+    {
+      "date": "4/22/21",
+      "author": "M. Chen",
+      "note_type": "Inspection Note",
+      "content": "Installed 57 LF of duct on floor 2. Rework required grid C-4. Inspections needed: none."
+    },
+    {
+      "date": "3/17/22",
+      "author": "M. Chen",
+      "note_type": "Daily Report",
+      "content": "Working in Zone 3 - 63% complete this zone. Remaining: controls terminations."
+    },
+    {
+      "date": "3/11/22",
+      "author": "R. Williams",
+      "note_type": "Coordination Note",
+      "content": "Safety meeting held at start of shift - topic: ladder safety. All PPE verified. Continued ductwork installation per plan."
+    },
+    {
+      "date": "2022-04-05",
+      "author": "K. Thompson",
+      "note_type": "Inspection Note",
+      "content": "Equipment startup for RTU-1. Successful - all parameters normal. Punch list items: damper actuator adjustment."
+    },
+    {
+      "date": "2022-04-01",
+      "author": "J. Martinez",
+      "note_type": "Safety Log",
+      "content": "Crew arrived 0700. Weather: Clear, 72\u00b0F. 13 workers on site. Focus today: hanging VAV boxes wing B. Coordination issues with electrical - resolved on site."
+    },
+    {
+      "date": "2022-03-30",
+      "author": "R. Williams",
+      "note_type": "Daily Report",
+      "content": "Equipment startup for Boiler. Successful - all parameters normal. Punch list items: none."
+    },
+    {
+      "date": "2022-03-29",
+      "author": "K. Thompson",
+      "note_type": "Inspection Note",
+      "content": "TAB contractor on site - balancing VAV system floor 2. Initial readings: static pressure high. Adjustments: none required."
+    },
+    {
+      "date": "2022-03-22",
+      "author": "J. Martinez",
+      "note_type": "Safety Log",
+      "content": "Received delivery of sheet metal - 95 units. Matched PO. Staged at laydown area A."
+    },
+    {
+      "date": "2022-03-21",
+      "author": "K. Thompson",
+      "note_type": "Coordination Note",
+      "content": "Met with electrical foreman re: coordination. Agreed on sequence for ceiling close-in. Action items: HVAC to relocate diffuser 6 inches east"
+    },
+    {
+      "date": "2022-03-14",
+      "author": "J. Martinez",
+      "note_type": "Safety Log",
+      "content": "Met with plumbing foreman re: coordination. Agreed on sequence for ceiling close-in. Action items: HVAC to relocate diffuser 6 inches east"
+    },
+    {
+      "date": "2022-03-10",
+      "author": "J. Martinez",
+      "note_type": "Inspection Note",
+      "content": "Working in Zone 3 - 64% complete this zone. Remaining: controls terminations."
+    },
+    {
+      "date": "2022-03-09",
+      "author": "J. Martinez",
+      "note_type": "Coordination Note",
+      "content": "GC weekly meeting - discussed change orders, RFI backlog, coordination. Schedule status: 3 days behind. RFIs pending: 4."
+    },
+    {
+      "date": "2022-03-08",
+      "author": "K. Thompson",
+      "note_type": "Daily Report",
+      "content": "Received delivery of VAV boxes - 38 units. Matched PO. Staged at loading dock."
+    },
+    {
+      "date": "2022-03-07",
+      "author": "M. Chen",
+      "note_type": "Inspection Note",
+      "content": "Equipment startup for Chiller. Delayed - controls not ready. Punch list items: sensor calibration."
+    },
+    {
+      "date": "2022-03-03",
+      "author": "J. Martinez",
+      "note_type": "Daily Report",
+      "content": "Met with drywall foreman re: coordination. Scheduled joint walkthrough Friday. Action items: FP to adjust sprinkler head locations"
+    },
+    {
+      "date": "2022-02-25",
+      "author": "M. Chen",
+      "note_type": "Inspection Note",
+      "content": "Safety meeting held at start of shift - topic: ladder safety. All PPE verified. Set 3 VAV boxes, awaiting controls."
+    }
+  ]
+}
