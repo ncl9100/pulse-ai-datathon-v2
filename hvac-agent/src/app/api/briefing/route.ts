@@ -16,10 +16,18 @@
  */
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
-import scanData from "@/data/scan.json";
-import portfolioStatsData from "@/data/portfolio_stats.json";
 import fs from "fs";
 import path from "path";
+
+function loadScanData(): Record<string, unknown>[] {
+  const filePath = path.join(process.cwd(), "src", "data", "scan.json");
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
+
+function loadPortfolioStats(): Record<string, unknown> {
+  const filePath = path.join(process.cwd(), "src", "data", "portfolio_stats.json");
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
 
 // ── Sector classification from project names ───────────────────────────
 function classifySector(projectName: string): string {
@@ -191,7 +199,7 @@ export async function GET(request: Request) {
 
   try {
     // ── Step 1: Load all projects with sector classification ────────
-    const allProjects = scanData as Array<Record<string, unknown>>;
+    const allProjects = loadScanData();
 
     // ── Step 2: Classify each project ──────────────────────────────
     const classified = allProjects.map((p) => {
@@ -307,11 +315,12 @@ export async function GET(request: Request) {
       total_dollar_exposure: Math.round(data.exposure),
     }));
 
+    const portfolioStats = loadPortfolioStats();
     const portfolioData = JSON.stringify({
       sector_stats: sectorSummary,
-      gc_stats: portfolioStatsData.gc_stats,
-      cohort_stats: portfolioStatsData.cohort_stats,
-      rfi_correlation: portfolioStatsData.rfi_correlation,
+      gc_stats: portfolioStats.gc_stats,
+      cohort_stats: portfolioStats.cohort_stats,
+      rfi_correlation: portfolioStats.rfi_correlation,
       total_projects: allProjects.length,
       overall_avg_margin: Math.round(avgMargin * 100) / 100,
     }, null, 2);

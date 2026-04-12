@@ -5,11 +5,18 @@
  * Uses pre-computed data from DuckDB (exported as JSON).
  */
 import { NextResponse } from "next/server";
-import scanData from "@/data/scan.json";
+import fs from "fs";
+import path from "path";
+
+function loadScanData(): Record<string, unknown>[] {
+  const filePath = path.join(process.cwd(), "src", "data", "scan.json");
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return JSON.parse(raw);
+}
 
 export async function GET() {
   try {
-    const projects = scanData as Record<string, unknown>[];
+    const projects = loadScanData();
 
     // Classify each project by severity
     const classified = projects.map((p) => {
