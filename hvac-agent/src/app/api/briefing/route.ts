@@ -220,8 +220,6 @@ export async function GET(request: Request) {
 
       const dollarExposure = Math.abs(p.total_variance as number);
       const forecast = !isCompleted ? forecastMargin(p) : null;
-
-      const projectId = p.project_id as string;
       const projectName = p.project_name as string;
       const contractValue = p.contract_value as number;
       const totalVariance = p.total_variance as number;
