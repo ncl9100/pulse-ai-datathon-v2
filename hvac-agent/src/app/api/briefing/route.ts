@@ -213,7 +213,7 @@ export async function GET(request: Request) {
       const dollarExposure = Math.abs(p.total_variance as number);
       const forecast = !isCompleted ? forecastMargin(p) : null;
 
-      return { ...p, sector, cohort, status, severity, dollar_exposure: dollarExposure, forecast };
+      return { ...p, sector, cohort, status, severity, dollar_exposure: dollarExposure, realized_margin_pct: marginPct, forecast };
     });
 
     // ── Step 3: Flag at-risk, sorted by dollar exposure ────────────
@@ -224,7 +224,7 @@ export async function GET(request: Request) {
 
     const critical = classified.filter((p) => p.severity === "CRITICAL").length;
     const warning = classified.filter((p) => p.severity === "WARNING").length;
-    const avgMargin = classified.reduce((s, p) => s + (p.realized_margin_pct as number), 0) / classified.length;
+    const avgMargin = classified.reduce((s, p) => s + p.realized_margin_pct, 0) / classified.length;
     const totalDollarsAtRisk = classified
       .filter((p) => p.severity === "CRITICAL" || p.severity === "WARNING")
       .reduce((s, p) => s + p.dollar_exposure, 0);
