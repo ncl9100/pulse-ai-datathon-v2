@@ -186,8 +186,12 @@ export default function BriefingPage() {
 
         const data: BriefingResponse = await response.json();
 
-        // Cache the raw response
-        saveToCache(data);
+        // Only cache complete responses, so a truncated or failed analysis
+        // is retried on the next visit instead of being shown from cache
+        const isComplete =
+          data.project_analyses?.every((a) => Array.isArray(a?.root_causes)) &&
+          Boolean(data.portfolio_patterns?.portfolio_patterns);
+        if (isComplete) saveToCache(data);
 
         const { displayProjects, patterns } = processBriefingData(data);
         setProjects(displayProjects);

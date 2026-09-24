@@ -137,6 +137,8 @@ IMPORTANT RULES:
 - Recovery actions must be specific: name the change order number, the SOV line description, the dollar amount.
 - For COMPLETED projects: only recommend retention release, CO audits, or lessons learned. Do NOT recommend redirecting labor or submitting new billing.
 - For ACTIVE projects: recommend immediate actions like submitting billing, filing COs, redirecting crew.
+- Be concise: at most 4 root causes and 3 recovery actions, each explanation or rationale under 60 words.
+- Return ONLY the JSON object below, with no text before or after it.
 
 Format your response as JSON:
 {
@@ -171,6 +173,7 @@ const PORTFOLIO_PATTERNS_PROMPT = `You are a CFO agent analyzing cross-portfolio
 Your job is to identify systemic patterns — things the CFO needs to know that aren't visible when looking at individual projects.
 
 IMPORTANT: Write in plain English. No column names. Use dollar amounts and percentages with context.
+Be concise: at most 5 patterns, each field under 60 words. Return ONLY the JSON object below, with no text before or after it.
 
 Format as JSON:
 {
@@ -305,7 +308,7 @@ export async function GET(request: Request) {
 
       const message = await client.messages.create({
         model: CLAUDE_MODEL,
-        max_tokens: 2048,
+        max_tokens: 8192,
         system: PROJECT_ANALYSIS_PROMPT,
         messages: [{
           role: "user",
@@ -363,7 +366,7 @@ export async function GET(request: Request) {
 
     const portfolioPromise = client.messages.create({
       model: CLAUDE_MODEL,
-      max_tokens: 2048,
+      max_tokens: 8192,
       system: PORTFOLIO_PATTERNS_PROMPT,
       messages: [{
         role: "user",
