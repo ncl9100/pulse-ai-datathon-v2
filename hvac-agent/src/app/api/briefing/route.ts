@@ -16,6 +16,7 @@
  */
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_MODEL } from "@/lib/model";
 import fs from "fs";
 import path from "path";
 
@@ -303,7 +304,7 @@ export async function GET(request: Request) {
       }, null, 2);
 
       const message = await client.messages.create({
-        model: "claude-sonnet-4-20250514",
+        model: CLAUDE_MODEL,
         max_tokens: 2048,
         system: PROJECT_ANALYSIS_PROMPT,
         messages: [{
@@ -361,7 +362,7 @@ export async function GET(request: Request) {
     }, null, 2);
 
     const portfolioPromise = client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: CLAUDE_MODEL,
       max_tokens: 2048,
       system: PORTFOLIO_PATTERNS_PROMPT,
       messages: [{
@@ -416,8 +417,9 @@ export async function GET(request: Request) {
     });
   } catch (error) {
     console.error("Briefing error:", error);
+    const detail = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to generate briefing" },
+      { error: "Failed to generate briefing", detail },
       { status: 500 }
     );
   }

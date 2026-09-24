@@ -4,6 +4,7 @@
  */
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_MODEL } from "@/lib/model";
 
 export async function GET() {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -16,7 +17,7 @@ export async function GET() {
     const client = new Anthropic({ apiKey });
 
     const message = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: CLAUDE_MODEL,
       max_tokens: 100,
       messages: [{ role: "user", content: "Say hello in exactly 5 words." }],
     });

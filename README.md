@@ -34,7 +34,7 @@ npm run dev        # http://localhost:3000
 | Layer | Technology |
 |-------|-----------|
 | Frontend | Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui, Recharts |
-| AI Reasoning | Anthropic Claude API (claude-sonnet-4-20250514) |
+| AI Reasoning | Anthropic Claude API (claude-sonnet-5, configurable via ANTHROPIC_MODEL) |
 | Data Pipeline | DuckDB (build-time), pre-computed JSON (runtime) |
 | Hosting | Vercel (serverless functions) |
 | UI Prototyping | v0.dev |

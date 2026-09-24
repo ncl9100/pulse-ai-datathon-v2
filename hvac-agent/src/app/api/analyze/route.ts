@@ -11,6 +11,7 @@
  */
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_MODEL } from "@/lib/model";
 import fs from "fs";
 import path from "path";
 
@@ -95,7 +96,7 @@ export async function POST(request: Request) {
     const client = new Anthropic({ apiKey });
 
     const message = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: CLAUDE_MODEL,
       max_tokens: 4096,
       system: SYSTEM_PROMPT,
       messages: [
