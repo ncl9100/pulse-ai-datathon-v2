@@ -1,4 +1,4 @@
-# MarginGuard — Autonomous HVAC Margin Erosion Agent
+# MarginGuard: Autonomous HVAC Margin Erosion Agent
 
 An autonomous AI agent that analyzes a $6.4B portfolio of 405 HVAC projects, detects margin erosion, explains root causes in plain English, and delivers dollar-quantified recovery actions a CFO can act on immediately.
 
